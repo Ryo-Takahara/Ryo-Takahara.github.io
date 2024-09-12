@@ -1,5 +1,5 @@
 <style>
-  .summer-vacation {
+  .summer-vacation-container {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -7,79 +7,78 @@
     align-items: center;
     padding: 116px 21px 617px 80px;
   }
+
   .main-title {
     color: #000;
     text-align: center;
     font: 700 96px Inter, sans-serif;
   }
+
   .subtitle {
     color: #000;
     text-align: center;
     margin-top: 29px;
     font: 400 48px Inter, sans-serif;
   }
+
   .content-wrapper {
     align-self: end;
     width: 100%;
     max-width: 1294px;
   }
+
   .two-column-layout {
-    gap: 20px;
     display: flex;
+    gap: 20px;
   }
+
   .left-column {
     display: flex;
     flex-direction: column;
-    line-height: normal;
     width: 56%;
-    margin-left: 0;
   }
-  .left-content {
+
+  .right-column {
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
+    width: 44%;
+  }
+
+  .text-block {
     color: #000;
-    white-space: nowrap;
     text-align: center;
-    margin: 133px -44px 0 0;
     font: 400 48px Inter, sans-serif;
   }
-  .intro-text {
+
+  .bordered-text {
     align-self: start;
+    margin-left: 19px;
+    border: 1px solid #000;
   }
-  .volleyball-image {
+
+  .image-wrapper {
+    margin-top: 36px;
+  }
+
+  .image {
     aspect-ratio: 1.56;
     object-fit: contain;
     object-position: center;
     width: 100%;
-    margin-top: 36px;
   }
-  .right-column {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 44%;
-    margin-left: 20px;
+
+  .small-text {
+    font-size: 40px;
   }
-  .right-content {
-    display: flex;
-    flex-direction: column;
-    color: #000;
-    white-space: nowrap;
-    text-align: center;
-    font: 400 40px Inter, sans-serif;
-  }
-  .homework-image {
+
+  .vertical-image {
     aspect-ratio: 0.9;
     object-fit: contain;
     object-position: center;
     width: 530px;
     max-width: 100%;
   }
-  .homework-text {
-    align-self: end;
-    margin-top: 18px;
-  }
+
   .gym-description {
     color: #000;
     text-align: center;
@@ -87,13 +86,15 @@
     margin-left: 103px;
     font: 400 36px Inter, sans-serif;
   }
+
   .subject-list {
     color: #000;
     text-align: center;
     margin-top: 82px;
     font: 400 96px Inter, sans-serif;
   }
-  .geometry-image {
+
+  .square-image {
     aspect-ratio: 0.96;
     object-fit: contain;
     object-position: center;
@@ -101,6 +102,7 @@
     margin-top: 25px;
     max-width: 100%;
   }
+
   .conclusion {
     color: #000;
     text-align: center;
@@ -108,78 +110,76 @@
     margin-left: 118px;
     font: 400 48px Inter, sans-serif;
   }
+
   @media (max-width: 991px) {
-    .summer-vacation {
+    .summer-vacation-container {
       padding: 100px 20px;
     }
+
     .main-title,
     .subtitle,
-    .left-content,
-    .right-content,
-    .gym-description,
+    .text-block,
+    .small-text,
     .subject-list,
     .conclusion {
       max-width: 100%;
       font-size: 40px;
     }
-    .content-wrapper {
-      max-width: 100%;
-    }
+
     .two-column-layout {
       flex-direction: column;
       align-items: stretch;
       gap: 0;
     }
+
     .left-column,
     .right-column {
       width: 100%;
     }
-    .left-content {
+
+    .text-block {
       margin-top: 40px;
       white-space: initial;
     }
-    .volleyball-image,
-    .homework-image,
-    .geometry-image {
-      max-width: 100%;
-    }
+
     .subject-list {
       margin-top: 40px;
     }
   }
 </style>
 
-<section class="summer-vacation">
+<section class="summer-vacation-container">
   <h1 class="main-title">中学初の夏休み</h1>
   <h2 class="subtitle">〜部活漬けの地獄〜</h2>
+  
   <div class="content-wrapper">
     <div class="two-column-layout">
       <div class="left-column">
-        <div class="left-content">
-          <p class="intro-text">
-            晴れて中学生になり、バレー部に入ることを決めた高原は、夏休みに一週間一回しか休みがないという地獄を味わうとは全くも思っていなかった。
-          </p>
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/758ef009342612f329ef26d598ffc7c1af37026c5e84e33e8fd158fd1cd1b2d8?placeholderIfAbsent=true&apiKey=ff23ad393fe14ea9bb17ea5cf96639b8" alt="バレーボール練習の様子" class="volleyball-image" />
+        <div class="text-block">
+          <p class="bordered-text">晴れて中学生になり、バレー部に入ることを決めた高原は、夏休みに一週間一回しか休みがないという地獄を味わうとは全くも思っていなかった。</p>
+          <div class="image-wrapper">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/758ef009342612f329ef26d598ffc7c1af37026c5e84e33e8fd158fd1cd1b2d8?placeholderIfAbsent=true&apiKey=ff23ad393fe14ea9bb17ea5cf96639b8" alt="Summer vacation activities" class="image" />
+          </div>
         </div>
       </div>
       <div class="right-column">
-        <div class="right-content">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6abee3abc861df2f96b640f21e01fd2685d56e451780de225027744bbbd507c5?placeholderIfAbsent=true&apiKey=ff23ad393fe14ea9bb17ea5cf96639b8" alt="夏休みの宿題" class="homework-image" />
-          <p class="homework-text">
-            夏休みを終えて、一番最初によかったと思ったのは、終業式前に夏休みの宿題に手を付けていたことだ。
-          </p>
+        <div class="text-block small-text">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6abee3abc861df2f96b640f21e01fd2685d56e451780de225027744bbbd507c5?placeholderIfAbsent=true&apiKey=ff23ad393fe14ea9bb17ea5cf96639b8" alt="Student studying" class="vertical-image" />
+          <p>夏休みを終えて、一番最初によかったと思ったのは、終業式前に夏休みの宿題に手を付けていたことだ。</p>
         </div>
       </div>
     </div>
   </div>
+  
   <p class="gym-description">第一体育館。エアコンなしで４時間バレーボールをする羽目になる。</p>
+  
   <p class="subject-list">
     代数、国語、宗教、<br />
     そして心の底から<br />
     好きではない幾何。
   </p>
-  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d1e9abefea6418e3b32f5fb51b5c12a8271721099f8c5b389a6c6217b4f15cff?placeholderIfAbsent=true&apiKey=ff23ad393fe14ea9bb17ea5cf96639b8" alt="幾何学の教科書や問題" class="geometry-image" />
-  <p class="conclusion">
-    この２つ（特に部活）によって、高原の夏はいい思い出だけではなくなってしまった。来年はオフの日は存分に遊ぼうと思う。
-  </p>
+  
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d1e9abefea6418e3b32f5fb51b5c12a8271721099f8c5b389a6c6217b4f15cff?placeholderIfAbsent=true&apiKey=ff23ad393fe14ea9bb17ea5cf96639b8" alt="School subjects illustration" class="square-image" />
+  
+  <p class="conclusion">この２つ（特に部活）によって、高原の夏はいい思い出だけではなくなってしまった。来年はオフの日は存分に遊ぼうと思う。</p>
 </section>
